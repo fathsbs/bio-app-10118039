@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#20242b"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/name_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="410dp"
+        android:layout_centerHorizontal="true"
+        android:text="バイオデータ"
+        android:fontFamily="@font/boldfinger"
+        android:textStyle="bold"
+        android:textColor="#6a07c5"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/name_app_romaji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_app"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/boldfinger"
+
+        android:text="b a i o d e e ta"
+        android:textColor="#be1aba"
+        android:textSize="35sp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/name_app_romaji"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        app:SpinKit_Color="#6506be" />
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="878dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/year"
+        android:textAllCaps="true"
+        android:textColor="#433658"
+        android:fontFamily="@font/boldfinger"
+        android:textSize="22sp" />
+
+
+</RelativeLayout>
