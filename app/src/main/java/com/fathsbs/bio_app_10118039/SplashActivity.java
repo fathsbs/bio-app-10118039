@@ -17,7 +17,7 @@ import com.github.ybq.android.spinkit.style.MultiplePulse;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN = 3000;
+    private static int SPLASH_SCREEN = 5000;
     Animation logoAnim,textAnim,copyrightAnim,pgBar_anim;
     ImageView image;
     com.github.ybq.android.spinkit.SpinKitView pgBar;
@@ -39,7 +39,6 @@ public class SplashActivity extends AppCompatActivity {
         copyrightAnim = AnimationUtils.loadAnimation(this,R.anim.copyright_animation);
         pgBar_anim = AnimationUtils.loadAnimation(this,R.anim.pg_bar_animation);
 
-
         //Cari id
         image   = findViewById(R.id.logo);
         text_app    = findViewById(R.id.name_app);
@@ -58,10 +57,9 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, WalktroughActivity.class);
+                Intent intent = new Intent(SplashActivity.this,WalktroughActivity.class);
                 startActivity(intent);
-                finish();
             }
-         }, SPLASH_SCREEN);
+        },SPLASH_SCREEN);
     }
 }

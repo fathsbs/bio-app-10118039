@@ -36,7 +36,7 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/boldfinger"
 
-        android:text="b a i o d e e ta"
+        android:text="b a i o d e e t a"
         android:textColor="#be1aba"
         android:textSize="35sp" />
 
