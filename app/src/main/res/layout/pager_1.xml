@@ -4,13 +4,65 @@
     android:layout_height="match_parent"
     android:background="#20242b">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="450dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="340dp"
+        android:layout_centerHorizontal="true"
+
+        android:src="@drawable/people_pager_1" />
+
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/teks1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp"
+        android:fontFamily="@font/magic_owl"
+        android:text="Come on, get closer to"
         android:textColor="@color/white"
-        android:text="Pager 1"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/teks2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teks1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/magic_owl"
+        android:text="Fatahillah Satria Bima Seno"
+        android:textColor="@color/white"
+        android:textSize="32dp" />
+
+    <ImageView
+        android:id="@+id/sign1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="228dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/sign2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/sign1"
+        android:src="@drawable/circle2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/sign2"
+        android:src="@drawable/circle2" />
+
 
 </RelativeLayout>

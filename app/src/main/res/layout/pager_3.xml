@@ -4,13 +4,78 @@
     android:layout_height="match_parent"
     android:background="#20242b">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="5000dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="340dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/daily_and_socmed" />
+
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/teks1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp"
+        android:fontFamily="@font/magic_owl"
+        android:text="There is more about him"
         android:textColor="@color/white"
-        android:text="Pager 3"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/teks2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teks1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/magic_owl"
+        android:text="his daily activity, photo, and contact"
+        android:textColor="@color/white"
+        android:textSize="32dp" />
+
+    <Button
+        android:id="@+id/buttonGo"
+        android:layout_marginTop="545dp"
+        android:layout_below="@id/teks2"
+        android:layout_centerHorizontal="true"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Here We Go!"
+        android:background="@drawable/button_go"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:onClick=""
+        />
+
+    <ImageView
+        android:id="@+id/sign1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="228dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/circle2" />
+
+    <ImageView
+        android:id="@+id/sign2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="50dp"
+        android:layout_toRightOf="@id/sign1"
+        android:src="@drawable/circle2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="50dp"
+        android:layout_toRightOf="@id/sign2"
+        android:src="@drawable/circle" />
+
 
 </RelativeLayout>
