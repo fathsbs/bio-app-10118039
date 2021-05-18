@@ -61,8 +61,8 @@
         android:text="@string/year"
         android:textAllCaps="true"
         android:textColor="#433658"
-        android:fontFamily="@font/boldfinger"
-        android:textSize="22sp" />
+
+        android:textSize="20sp" />
 
 
 </RelativeLayout>
