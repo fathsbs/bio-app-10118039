@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menuActivity"
+    tools:context=".MenuActivity"
     android:background="#20242b">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,7 +29,7 @@
                 android:layout_height="30dp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_menu"
-                android:tint="#6a07c5"/>
+                app:tint="#6a07c5"/>
 
             <TextView
                 android:id="@+id/textTitle"
@@ -42,6 +42,16 @@
                 android:textStyle="bold"/>
 
         </LinearLayout>
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/navHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/main"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

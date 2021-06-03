@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuHome">
+
+    <fragment
+        android:id="@+id/menuHome"
+        android:name="com.fathsbs.bio_app_10118039.menuFragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/menuDailyActivity"
+        android:name="com.fathsbs.bio_app_10118039.menuFragments.DailyFragment"
+        android:label="Daily Activity"
+        tools:layout="@layout/fragment_daily" />
+    <fragment
+        android:id="@+id/menuGallery"
+        android:name="com.fathsbs.bio_app_10118039.menuFragments.GalleryFragment"
+        android:label="Gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/menuMusicVideo"
+        android:name="com.fathsbs.bio_app_10118039.menuFragments.MVFragment"
+        android:label="Music &amp; Video"
+        tools:layout="@layout/fragment_m_v" />
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="com.fathsbs.bio_app_10118039.menuFragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
