@@ -17,5 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".WalktroughActivity"/>
+        <activity android:name=".menuActivity"/>
     </application>
 </manifest>

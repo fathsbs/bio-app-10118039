@@ -4,4 +4,9 @@
     <string name="year">©2021</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="daily_activity">Daily Activity</string>
+    <string name="gallery">Gallery</string>
+    <string name="music_amp_video"><![CDATA[Music & Video]]></string>
+    <string name="profile">Profile</string>
 </resources>
