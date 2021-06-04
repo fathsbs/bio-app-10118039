@@ -1,17 +1,335 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primaryColor"
     tools:context=".menuFragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Home"
-        android:textSize="20sp"
-        android:textColor="@color/white"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/FP"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/me" />
+
+            <TextView
+                android:id="@+id/nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/FP"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:text="Fatahillah Satria Bima Seno"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nama"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:text="UNIKOM Student"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/job"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:text="2018"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/hobby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/kotak1"
+            app:layout_constraintEnd_toEndOf="@id/profil"
+            app:layout_constraintTop_toBottomOf="@id/profil">
+
+            <TextView
+                android:id="@+id/titleHobby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Hobby"
+                android:textAllCaps="true"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageReading"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/titleHobby"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/reading"
+                app:tint="@color/purplePrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageReading"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="47dp"
+                android:layout_marginBottom="18dp"
+                android:text="Reading"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imageWorkOut"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/titleHobby"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/working_out"
+                app:tint="@color/purplePrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageWorkOut"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="18dp"
+                android:text="Working Out"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imageCleaning"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/titleHobby"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:src="@drawable/cleaning"
+                app:tint="@color/purplePrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageCleaning"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="18dp"
+                android:text="Cleaning"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/makes"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/kotak1"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="@id/hobby"
+            app:layout_constraintTop_toBottomOf="@id/hobby">
+
+            <TextView
+                android:id="@+id/titleMakes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Makes"
+                android:textAllCaps="true"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageNoodle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/titleMakes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/noodle"
+                app:tint="@color/purplePrimary" />
+
+            <TextView
+                android:id="@+id/textNoodle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageNoodle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="47dp"
+                android:layout_marginTop="20dp"
+
+                android:text="Noodle"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mikes"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/kotak1"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="@id/hobby"
+            app:layout_constraintTop_toBottomOf="@id/hobby">
+
+            <TextView
+                android:id="@+id/titleMikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Mikes"
+                android:textAllCaps="true"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageJuice"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/titleMikes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/juice"
+                app:tint="@color/purplePrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageJuice"
+               android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+
+                android:text="Manggo Juice"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/kotak1"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="@id/makes"
+            app:layout_constraintTop_toBottomOf="@id/makes">
+
+            <TextView
+                android:id="@+id/titleInterest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Interest"
+                android:textAllCaps="true"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleInterest"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:text="Technology"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/kotak1"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="@id/mikes"
+            app:layout_constraintTop_toBottomOf="@id/mikes">
+
+            <TextView
+                android:id="@+id/titleAim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="aim"
+                android:textAllCaps="true"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/teks1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleAim"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:text="Developer"
+                android:textColor="@color/pinkPrimary"
+                android:textSize="15sp" />
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>
