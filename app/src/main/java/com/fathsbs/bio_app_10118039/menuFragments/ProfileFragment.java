@@ -1,12 +1,20 @@
 package com.fathsbs.bio_app_10118039.menuFragments;
 
+import android.Manifest;
+import android.app.Dialog;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.fathsbs.bio_app_10118039.R;
 
@@ -61,6 +69,112 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        Button ig, phone, fb, loc, mail, about;
+
+        ig = view.findViewById(R.id.btnInstagram);
+        phone = view.findViewById(R.id.btnPhone);
+        fb = view.findViewById(R.id.btnFacebook);
+        loc=view.findViewById(R.id.btnLoc);
+        mail = view.findViewById(R.id.btnMail);
+        about = view.findViewById(R.id.btnAbout);
+
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.facebook.com/fatahillahsbs");
+            }
+        });
+        ig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.instagram.com/fathsbs/");
+            }
+        });
+
+        phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callingPhone("tel:081211270302");
+            }
+        });
+        loc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findLocation("https://goo.gl/maps/abQkpCjGSPWh6HcZA");
+            }
+        });
+        mail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendingMail("fatahillah.10118039@mahasiswa.unikom.ac.id");
+            }
+        });
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.custom_dialog_about);
+
+                //
+                Button close = dialog.findViewById(R.id.closeButton);
+
+                close.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+            }
+        });
+
+        return view;
+    }
+
+    private void findLocation(String s) {
+        Uri uri = Uri.parse(s);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+
+    }
+
+    private void sendingMail(String s) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{s});
+        intent.putExtra(Intent.EXTRA_CC, new String[]{""});
+        intent.putExtra(Intent.EXTRA_SUBJECT, "");
+        intent.putExtra(Intent.EXTRA_TEXT, "");
+        startActivity(Intent.createChooser(intent, "akan mengirimkan Email ?"));
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    private void callingPhone(String s) {
+        final int REQUEST_PHONE_CALL = 1;
+
+        Uri uri = Uri.parse(s);
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(uri);
+
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.CALL_PHONE}, REQUEST_PHONE_CALL);
+        } else {
+
+            startActivity(intent);
+        }
+
+
     }
 }

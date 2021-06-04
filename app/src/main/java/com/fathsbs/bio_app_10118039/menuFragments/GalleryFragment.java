@@ -3,11 +3,14 @@ package com.fathsbs.bio_app_10118039.menuFragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.fathsbs.bio_app_10118039.Adapter.GalleryAdapter;
 import com.fathsbs.bio_app_10118039.R;
 
 /**
@@ -16,6 +19,9 @@ import com.fathsbs.bio_app_10118039.R;
  * create an instance of this fragment.
  */
 public class GalleryFragment extends Fragment {
+
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,11 +62,28 @@ public class GalleryFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    private RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
+    GalleryAdapter galleryAdapter;
+
+    int []arr ={R.drawable.pictures1,R.drawable.pictures2,R.drawable.pictures3,R.drawable.pictures4,R.drawable.pictures5,R.drawable.pictures6,R.drawable.pictures7,R.drawable.pictures8,R.drawable.pictures9,R.drawable.pictures10,R.drawable.pictures11,R.drawable.pictures12};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false);
+        View view = inflater.inflate(R.layout.fragment_gallery, container, false);
+
+        recyclerView= view.findViewById(R.id.galleryRecyclerView);
+        layoutManager= new GridLayoutManager(getActivity(),2);
+        recyclerView.setLayoutManager(layoutManager);
+        galleryAdapter= new GalleryAdapter(arr);
+        recyclerView.setAdapter(galleryAdapter);
+        recyclerView.setHasFixedSize(true);
+
+        return view;
+
     }
+
+
 }

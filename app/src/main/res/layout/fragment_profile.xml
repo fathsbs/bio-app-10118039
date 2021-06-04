@@ -3,14 +3,315 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menuFragments.ProfileFragment">
+    tools:context=".menuFragments.ProfileFragment"
+    android:background="@color/primaryColor">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Profile"
-        android:textSize="20sp"/>
+    <RelativeLayout
+        android:id="@+id/profil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/FP"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/me" />
+
+        <TextView
+
+            android:id="@+id/nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/FP"
+            android:layout_marginTop="50dp"
+            android:text="Fatahillah Satria BS"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nama"
+            android:layout_toRightOf="@id/FP"
+
+            android:layout_marginTop="10dp"
+            android:text="UNIKOM Student"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/job"
+            android:layout_toRightOf="@id/FP"
+            android:layout_marginTop="10dp"
+            android:text="2018"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FP"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Nama Panggilan"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/namaAsli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nickname"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:text="Fatah atau Seno"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/TTL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namaAsli"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Tempat Tanggal Lahir "
+            android:textColor="@color/pinkPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/ttlIsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TTL"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:text="Jakarta, 02 November 1998"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/Deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ttlIsi"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Deskripsi Diri"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/isi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Deskripsi"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="5dp"
+            android:text="- Berkacamata"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/isi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isi1"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="5dp"
+            android:text="- Tinggi 170 cm"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/isi3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isi2"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="5dp"
+            android:text="- Berat Badan 74 KG"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/isi4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isi3"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="5dp"
+            android:text="- Suka baca komik"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/isi5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isi4"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="5dp"
+            android:text="- Suka latihan olahraga"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/isi6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isi5"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="5dp"
+            android:text="- Suka bebersih"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/isi7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isi6"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:text="Phone"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnPhone"
+            android:layout_marginLeft="55dp"
+            android:layout_below="@id/isi7"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@drawable/kotak1"
+            android:text="Call"
+            android:textColor="@color/pinkPrimary"/>
+
+        <TextView
+            android:id="@+id/isi9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isi6"
+            android:layout_toRightOf="@id/isi7"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
+            android:text="E-Mail"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnMail"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/btnPhone"
+            android:layout_below="@id/isi7"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@drawable/kotak1"
+            android:text="Mail"
+            android:textColor="@color/pinkPrimary"/>
+
+        <TextView
+            android:id="@+id/isi10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isi6"
+            android:layout_toRightOf="@id/isi9"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="20dp"
+            android:text="Location"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnLoc"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/btnMail"
+            android:layout_below="@id/isi7"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@drawable/kotak1"
+            android:text="Find Me"
+            android:textColor="@color/pinkPrimary"/>
+
+
+
+        <TextView
+            android:id="@+id/isi8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnPhone"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
+            android:text="Social Media"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnInstagram"
+            android:layout_marginLeft="55dp"
+            android:layout_below="@id/isi8"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@drawable/kotak1"
+            android:text="Instagram"
+            android:textColor="@color/pinkPrimary"/>
+
+        <Button
+            android:id="@+id/btnFacebook"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/btnInstagram"
+            android:layout_below="@id/isi8"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@drawable/kotak1"
+            android:text="Facebook"
+            android:textColor="@color/pinkPrimary"/>
+
+        <TextView
+            android:id="@+id/isi11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnInstagram"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
+            android:text="About"
+            android:textColor="@color/pinkPrimary"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_marginLeft="55dp"
+            android:layout_below="@id/isi11"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@drawable/kotak1"
+            android:text="about app"
+            android:textColor="@color/pinkPrimary"/>
+
+
+    </RelativeLayout>
+
+
 
 </FrameLayout>
