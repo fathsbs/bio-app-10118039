@@ -1,3 +1,10 @@
+/*
+Tanggal Pengerjaan      : Terakhir 4 Juni 2021 22:44
+NIM                     : 10118039
+Nama                    : Fatahillah Satria Bima Seno
+Kelas                   : AKB-1 atau IF-1
+ */
+v
 package com.fathsbs.bio_app_10118039.fragments;
 
 import android.content.Intent;
